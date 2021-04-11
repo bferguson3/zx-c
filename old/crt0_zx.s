@@ -6,7 +6,7 @@
 		.globl _heap
 		.globl _stack
 
-		.area _HEADER(ABS)
+		.area _HEADER
 	
 		;di				; no rom anymore
 
@@ -77,7 +77,7 @@ gsinit:
 store_sp:	.word 1
 
 		;; 2048 bytes of operating system stack
-		.ds	2048
+		.ds	256
 _stack::
 		.area _HEAP
 _heap::
